@@ -2,7 +2,43 @@ body{
     font-family: Helvetica, sans-serif;
 }
 
+.bg-color-red{
+    background-color: #EB4A5A;
+}
+
 .card:hover{
-    box-shadow: 0 0 11px rgba(33,33,33,.5);
-    cursor: pointer;
+    box-shadow: 0 0 11px rgba(33,33,33,.3);
+}
+
+h1{
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    font-size: 66px;
+}
+
+.shopping-cart-btn{
+    background-color: transparent;
+    border: 0;
+}
+
+.shopping-cart-btn > img{
+    width: 1.8rem;
+}
+
+.add-to-cart-btn{
+    background-color: transparent;
+    border: 0;
+}
+
+.add-to-cart-btn img{
+    width: 1.5rem;
+}
+
+.card{
+    height: 21rem;
+}
+
+.card-img-top{
+    height: 11rem;
+    width: auto;
 }
