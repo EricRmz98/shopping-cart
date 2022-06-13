@@ -6,10 +6,6 @@ body{
     background-color: #EB4A5A;
 }
 
-.card:hover{
-    box-shadow: 0 0 11px rgba(33,33,33,.3);
-}
-
 h1{
     font-family: 'Permanent Marker', cursive;
     color: white;
@@ -34,11 +30,58 @@ h1{
     width: 1.5rem;
 }
 
-.card{
+.main-card{
     height: 21rem;
+}
+
+.main-card:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.3);
 }
 
 .card-img-top{
     height: 11rem;
     width: auto;
+}
+
+.shopping-cart-close-btn{
+    background-color: transparent;
+    border: 0;
+}
+
+.shopping-cart-close-btn img{
+    width: 1.5rem;
+}
+
+.shopping-cart-card .name{
+   height: 3rem;
+}
+
+.shopping-cart-img{
+    height: 5rem;
+    width: auto;
+}
+
+.shopping-cart-delete-btn{
+    background-color: transparent;
+    border: 0;
+}
+
+.shopping-cart-delete-btn img{
+    width: 1rem;
+}
+
+.checkout-btn{
+    border: 0;
+    background-color: #EB4A5A;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.sep-bottom{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.175);
+}
+
+.sep-top{
+    border-top: 1px solid rgba(0, 0, 0, 0.175);
 }

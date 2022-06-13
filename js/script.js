@@ -15,7 +15,7 @@ function showProducts(clothesArray) {
     for(let i = 0 ; i < clothesArray.length ; i++){
         html += `
         <div class="col-4 col-xl-3 col-xxl-2 p-1">
-            <div class="card d-flex flex-column py-3 align-items-stretch">
+            <div class="card main-card d-flex flex-column py-3 align-items-stretch">
                 <img src="${clothesArray[i].image}" class="card-img-top mx-auto">
                 <div class="card-body d-flex flex-column justify-content-between">
                     <p class="card-text">${clothesArray[i].model}</p>

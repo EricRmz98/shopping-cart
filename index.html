@@ -1,21 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clothing Store!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Permanent+Marker&display=swap"
         rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/style.css">
-    <title>Document</title>
 </head>
 
 <body>
+
+    <!-- main page -->
 
     <div class="d-flex justify-content-center bg-color-red">
         <h1 class="m-3">Clothing Store!</h1>
@@ -25,8 +26,10 @@
 
         <div class="d-flex justify-content-between py-3">
             <h3 class="my-auto">Todos nuestros productos</h3>
-            <button class="shopping-cart-btn my-auto"><img src="./images/shopping_cart_FILL0_wght400_GRAD0_opsz48.png"
-                    alt=""></button>
+            <button class="shopping-cart-btn my-auto" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvas" aria-controls="offcanvas">
+                <img src="./images/shopping_cart_FILL0_wght400_GRAD0_opsz48.png" alt="">
+            </button>
         </div>
 
         <div id="index-clothes-container" class="row">
@@ -35,7 +38,53 @@
 
     </div>
 
+    <!-- shopping cart -->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvas">
+        <div class="offcanvas-header sep-bottom">
+            <h5 class="offcanvas-title">Carrito de compras</h5>
+            <button type="button" class="shopping-cart-close-btn" data-bs-dismiss="offcanvas" aria-label="Close"><img
+                    src="./images/close_FILL0_wght400_GRAD0_opsz48.png" alt=""></button>
+        </div>
+
+        <div class="offcanvas-body overflow-auto">
+
+            <div class="card shopping-cart-card mb-3">
+                <div class="row g-0">
+                    <div class="col-4 d-flex justify-content-center">
+                        <img src="https://m.media-amazon.com/images/I/817Y6vYh72L._AC_SX679_.jpg"
+                            class="img-fluid rounded-start shopping-cart-img my-3" alt="...">
+                    </div>
+                    <div class="col-8">
+                        <div class="card-body text-end p-1">
+                            <button class="shopping-cart-delete-btn pr-1"><img
+                                    src="./images/cancel_FILL0_wght400_GRAD0_opsz48.png" alt=""></button>
+                            <div class="name">
+                                <p class="card-text m-0 text-start"><small>Jerzees Playera Azul Marino cuello redondo</small></p>
+                            </div>
+                            <p class="card-text m-0 me-2"><small>$99 usd</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="d-flex justify-content-between p-3 sep-top">
+            <div class="d-flex flex-column justify-content-center">
+                <p class="m-0">Subtotal: $$$$</p>
+            </div>
+            <div>
+                <button class="checkout-btn">Finalizar pedido</button>
+            </div>
+        </div>
+
+    </div>
+
     <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
