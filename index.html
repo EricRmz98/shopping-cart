@@ -46,6 +46,28 @@
         </div>
 
     </div>
+    
+    <!-- footer -->
+
+    <footer class="sep-t pt-3 px-5 my-3 d-flex">
+       <div class="container">
+        <div class="row">
+            <div class="col-6 sep">
+                <p>Informacion</p>
+                <hr>
+                <p class="m-0"><small>Contacto</small></p>
+                <p class="m-0"><small>Terminos y condiciones</small></p>
+                <p class="m-0"><small>Cambios y devoluciones</small></p>
+                <p class="m-0"><small>Politicas de privacidad</small></p>
+            </div>
+            <div class="col-6">
+                <p>Sobre nosotros</p>
+                <hr>
+                <p><small>Somos una tienda de ropa con base en Estados Unidos.</small></p>
+            </div>
+           </div>
+       </div>
+    </footer>
 
     <!-- shopping cart -->
 
@@ -69,10 +91,10 @@
                             <button class="shopping-cart-delete-btn pr-1"><img
                                     src="./images/cancel_FILL0_wght400_GRAD0_opsz48.png" alt=""></button>
                             <div class="name">
-                                <p class="card-text m-0 text-start"><small>Jerzees Playera Azul Marino cuello
+                                <p class="card-text m-0 text-start"><small>Jerzees Playera Roja cuello
                                         redondo</small></p>
                             </div>
-                            <p class="card-text m-0 me-2"><small>$99 usd</small></p>
+                            <p class="card-text m-0 me-2"><small>$4 usd</small></p>
                         </div>
                     </div>
                 </div>
@@ -82,10 +104,10 @@
 
         <div class="d-flex justify-content-between p-3 sep-t">
             <div class="d-flex flex-column justify-content-center">
-                <p class="m-0">Subtotal: $$$$</p>
+                <p class="m-0">Subtotal: $4 usd</p>
             </div>
             <div>
-                <button class="red-btn" data-bs-toggle="modal" data-bs-target="#myModal">Finalizar pedido</button>
+                <button class="red-btn" data-bs-toggle="modal" data-bs-target="#checkoutModal">Finalizar pedido</button>
             </div>
         </div>
 
@@ -93,7 +115,7 @@
 
     <!-- checkout -->
 
-    <div class="modal" id="myModal">
+    <div class="modal fade" id="checkoutModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
 
@@ -103,7 +125,7 @@
                     <h2>Clothing Store!</h2>
                 </div>
 
-                <div class="modal-body">
+                <div class="modal-body mt-5">
                     <div class="container">
                         <div class="row">
                             <div class="col-7 sep-e">
@@ -195,11 +217,11 @@
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item d-flex justify-content-between">
                                             <div class="pe-2">
-                                                <small>Jerzees Playera Azul Marino cuello
+                                                <small>Jerzees Playera Roja cuello
                                                     redondo</small>
                                             </div>
                                             <div>
-                                                <small>$00</small>
+                                                <small>$4</small>
                                             </div>
                                         </li>
                                     </ul>
@@ -207,12 +229,13 @@
 
                                 <div class="d-flex justify-content-between">
                                     <div>
-                                        <p class="m-0"><small>Subtotal: </small></p>
-                                        <p class="m-0"><small>Envio: </small></p>
-                                        <p class="m-0"><small>Total: </small></p>
+                                        <p class="m-0"><small>Subtotal: $4 usd</small></p>
+                                        <p class="m-0"><small>Envio: $5 usd</small></p>
+                                        <p class="m-0"><small>Total: $9 usd</small></p>
                                     </div>
                                     <div class="pt-4">
-                                        <button class="red-btn">Pagar</button>
+                                        <button class="red-btn" data-bs-target="#confirmationModal"
+                                            data-bs-toggle="modal">Pagar</button>
                                     </div>
                                 </div>
 
@@ -225,9 +248,26 @@
         </div>
     </div>
 
+    <!-- confirmation -->
 
+    <div class="modal fade" id="confirmationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="confirmationModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content py-3">
+                <div class="d-flex flex-column">
+                    <div class="d-flex justify-content-center">
+                        <img class="" src="./images/check_circle_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                    </div>
+                    <p class="text-center my-3">¡Gracias por su compra!</p>
+                    <div class="d-flex justify-content-center">
+                        <button class="red-btn" onclick="location.reload()" data-bs-toggle="modal">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
+    
 
     <script src="./js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
