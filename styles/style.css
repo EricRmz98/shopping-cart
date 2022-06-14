@@ -2,14 +2,24 @@ body{
     font-family: Helvetica, sans-serif;
 }
 
-.bg-color-red{
+h1{
+    font-family: 'Permanent Marker', cursive;
+    color: #EB4A5A;
+    font-size: 22px;
+}
+
+.header{
     background-color: #EB4A5A;
 }
 
-h1{
+.header img{
+    height: 5rem;
+}
+
+h2{
     font-family: 'Permanent Marker', cursive;
     color: white;
-    font-size: 66px;
+    font-size: 22px;
 }
 
 .shopping-cart-btn{
@@ -70,7 +80,7 @@ h1{
     width: 1rem;
 }
 
-.checkout-btn{
+.red-btn{
     border: 0;
     background-color: #EB4A5A;
     color: white;
@@ -78,10 +88,43 @@ h1{
     border-radius: 10px;
 }
 
-.sep-bottom{
+.continue-shopping-btn{
+    border: 0;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.continue-shopping-btn img{
+    height: 1rem;
+}
+
+.grey-btn{
+    border: 0;
+    background-color: #8a8a8a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.sep-b{
     border-bottom: 1px solid rgba(0, 0, 0, 0.175);
 }
 
-.sep-top{
+.sep-e{
+    border-right: 1px solid rgba(0, 0, 0, 0.175);
+}
+
+.sep-t{
     border-top: 1px solid rgba(0, 0, 0, 0.175);
 }
+
+.form-control:focus {
+    border-color: black;
+    box-shadow: 0 0 0 0.25rem white;
+  }
+
+  #confirmationModal img{
+    height: 3rem;
+    width: 3rem;
+  }
