@@ -16,20 +16,29 @@
 
 <body>
 
-    <!-- main page -->
+    <!-- navvar -->
 
-    <div class="d-flex justify-content-center bg-color-red">
-        <h1 class="m-3">Clothing Store!</h1>
+    <nav class="navbar">
+        <h1 class="ms-4">Clothing Store!</h1>
+
+        <button class="shopping-cart-btn my-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+            aria-controls="offcanvas">
+            <img src="./images/shopping_cart_FILL0_wght400_GRAD0_opsz48.png" alt="">
+        </button>
+    </nav>
+
+    <!-- header -->
+
+    <div class="header text-center">
+        <img class="my-4" src="./images/t-shirt-128.png" alt="">
     </div>
+
+    <!-- card-body -->
 
     <div class="container">
 
-        <div class="d-flex justify-content-between py-3">
+        <div class="py-3">
             <h3 class="my-auto">Todos nuestros productos</h3>
-            <button class="shopping-cart-btn my-auto" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvas" aria-controls="offcanvas">
-                <img src="./images/shopping_cart_FILL0_wght400_GRAD0_opsz48.png" alt="">
-            </button>
         </div>
 
         <div id="index-clothes-container" class="row">
@@ -41,7 +50,7 @@
     <!-- shopping cart -->
 
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvas">
-        <div class="offcanvas-header sep-bottom">
+        <div class="offcanvas-header sep-b">
             <h5 class="offcanvas-title">Carrito de compras</h5>
             <button type="button" class="shopping-cart-close-btn" data-bs-dismiss="offcanvas" aria-label="Close"><img
                     src="./images/close_FILL0_wght400_GRAD0_opsz48.png" alt=""></button>
@@ -60,7 +69,8 @@
                             <button class="shopping-cart-delete-btn pr-1"><img
                                     src="./images/cancel_FILL0_wght400_GRAD0_opsz48.png" alt=""></button>
                             <div class="name">
-                                <p class="card-text m-0 text-start"><small>Jerzees Playera Azul Marino cuello redondo</small></p>
+                                <p class="card-text m-0 text-start"><small>Jerzees Playera Azul Marino cuello
+                                        redondo</small></p>
                             </div>
                             <p class="card-text m-0 me-2"><small>$99 usd</small></p>
                         </div>
@@ -70,16 +80,154 @@
 
         </div>
 
-        <div class="d-flex justify-content-between p-3 sep-top">
+        <div class="d-flex justify-content-between p-3 sep-t">
             <div class="d-flex flex-column justify-content-center">
                 <p class="m-0">Subtotal: $$$$</p>
             </div>
             <div>
-                <button class="checkout-btn">Finalizar pedido</button>
+                <button class="red-btn" data-bs-toggle="modal" data-bs-target="#myModal">Finalizar pedido</button>
             </div>
         </div>
 
     </div>
+
+    <!-- checkout -->
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+
+                <div class="modal-header header p-3">
+                    <button class="continue-shopping-btn" data-bs-dismiss="modal"><img class="mb-1"
+                            src="./images/arrow_back_FILL0_wght400_GRAD0_opsz48.png" alt=""> Seguir comprando</button>
+                    <h2>Clothing Store!</h2>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-7 sep-e">
+                                <form action="">
+                                    <h4>Contacto</h4>
+                                    <hr>
+
+                                    <label for="email" class="form-label">Correo electronico</label>
+                                    <input type="email" class="form-control mb-2" name="email">
+
+                                    <h4 class="mt-5">Direccion de envio</h4>
+                                    <hr>
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label for="name" class="form-label">Nombre(s)</label>
+                                            <input type="text" class="form-control mb-2" name="name">
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="surname" class="form-label">Apellido(s)</label>
+                                            <input type="text" class="form-control mb-2" name="surname">
+                                        </div>
+                                    </div>
+
+                                    <label for="st-name" class="form-label">Calle</label>
+                                    <input type="email" class="form-control mb-2" name="st-name">
+
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <label for="ext-number" class="form-label">Numero exterior</label>
+                                            <input type="text" class="form-control mb-2" name="ext-number">
+                                        </div>
+                                        <div class="col-4">
+                                            <label for="int-number" class="form-label">Numero interior</label>
+                                            <input type="text" class="form-control mb-2" name="int-number">
+                                        </div>
+                                        <div class="col-4">
+                                            <label for="zip-code" class="form-label">Codigo postal</label>
+                                            <input type="text" class="form-control mb-2" name="zip-code">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label for="city" class="form-label">Ciudad</label>
+                                            <input type="text" class="form-control mb-2" name="city">
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="state" class="form-label">Estado</label>
+                                            <input type="text" class="form-control mb-2" name="state">
+                                        </div>
+                                    </div>
+
+                                    <label for="country" class="form-label">Pais</label>
+                                    <input type="email" class="form-control mb-2" name="country">
+
+                                    <label for="phone-number" class="form-label">Telefono</label>
+                                    <input type="email" class="form-control mb-2" name="phone-number">
+
+                                </form>
+                            </div>
+                            <div class="col-5">
+                                <form action="">
+                                    <h4>Datos bancarios</h4>
+                                    <hr>
+
+                                    <label for="card-number" class="form-label">Numero de tarjeta</label>
+                                    <input type="text" class="form-control mb-2" name="card-number">
+
+                                    <label for="card-holder" class="form-label">Titular de la tarjeta</label>
+                                    <input type="text" class="form-control mb-2" name="card-holder">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label for="expiration-date" class="form-label">Vencimiento</label>
+                                            <input type="text" class="form-control mb-2" name="expiration-date">
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="cvv" class="form-label">Cvv</label>
+                                            <input type="text" class="form-control mb-2" name="cvv">
+                                        </div>
+                                    </div>
+
+                                    <h4 class="mt-5">Resumen</h4>
+                                    <hr>
+                                </form>
+
+                                <div class="card mb-2 overflow-auto" style="width: 100%; height: 13.5rem;">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <div class="pe-2">
+                                                <small>Jerzees Playera Azul Marino cuello
+                                                    redondo</small>
+                                            </div>
+                                            <div>
+                                                <small>$00</small>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="m-0"><small>Subtotal: </small></p>
+                                        <p class="m-0"><small>Envio: </small></p>
+                                        <p class="m-0"><small>Total: </small></p>
+                                    </div>
+                                    <div class="pt-4">
+                                        <button class="red-btn">Pagar</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
 
     <script src="./js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
