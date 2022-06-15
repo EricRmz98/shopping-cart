@@ -80,31 +80,15 @@
 
         <div class="offcanvas-body overflow-auto">
 
-            <div class="card shopping-cart-card mb-3">
-                <div class="row g-0">
-                    <div class="col-4 d-flex justify-content-center">
-                        <img src="https://m.media-amazon.com/images/I/817Y6vYh72L._AC_SX679_.jpg"
-                            class="img-fluid rounded-start shopping-cart-img my-3" alt="...">
-                    </div>
-                    <div class="col-8">
-                        <div class="card-body text-end p-1">
-                            <button class="shopping-cart-delete-btn pr-1"><img
-                                    src="./images/cancel_FILL0_wght400_GRAD0_opsz48.png" alt=""></button>
-                            <div class="name">
-                                <p class="card-text m-0 text-start"><small>Jerzees Playera Roja cuello
-                                        redondo</small></p>
-                            </div>
-                            <p class="card-text m-0 me-2"><small>$4 usd</small></p>
-                        </div>
-                    </div>
-                </div>
+            <div class="card shopping-cart-card mb-3" id="CarritoCompra">
+               
             </div>
 
         </div>
 
         <div class="d-flex justify-content-between p-3 sep-t">
             <div class="d-flex flex-column justify-content-center">
-                <p class="m-0">Subtotal: $4 usd</p>
+                <p class="m-0" id="TotalCarrito">Subtotal: $0 usd</p>
             </div>
             <div>
                 <button class="red-btn" data-bs-toggle="modal" data-bs-target="#checkoutModal">Finalizar pedido</button>
@@ -214,24 +198,15 @@
                                 </form>
 
                                 <div class="card mb-2 overflow-auto" style="width: 100%; height: 13.5rem;">
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item d-flex justify-content-between">
-                                            <div class="pe-2">
-                                                <small>Jerzees Playera Roja cuello
-                                                    redondo</small>
-                                            </div>
-                                            <div>
-                                                <small>$4</small>
-                                            </div>
-                                        </li>
+                                    <ul class="list-group list-group-flush" id="ConfirmacionCompra">                                  
                                     </ul>
                                 </div>
 
                                 <div class="d-flex justify-content-between">
                                     <div>
-                                        <p class="m-0"><small>Subtotal: $4 usd</small></p>
-                                        <p class="m-0"><small>Envio: $5 usd</small></p>
-                                        <p class="m-0"><small>Total: $9 usd</small></p>
+                                        <p class="m-0"><small id="SubtotalCompra">Subtotal: $0 usd</small></p>
+                                        <p class="m-0"><small >Envio: $5 usd</small></p>
+                                        <p class="m-0"><small id="TotalCompra">Total: $5 usd</small></p>
                                     </div>
                                     <div class="pt-4">
                                         <button class="red-btn" data-bs-target="#confirmationModal"
